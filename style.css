@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+font-size: 18px;
+
+  cursor: url('https://raw.githubusercontent.com/YouGNMe/retro-cursors/main/crosshair.cur'), auto;
+
+
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+header {
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header h1 {
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-family: 'VT323', monospace;
+}
+
+section h2{
+ font-family: 'VT323', monospace;
+ letter-spacing: 1px;
+ font-size: 35px;
+}
+
+section p{
+  letter-spacing: 1px;
+  line-height: 2;
+
+}  
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color:  var(--navtext);
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav button {
+  margin-left: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 10px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+nav button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+
+section {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem; /* добавим разрыв между секциями */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-divider {
+  height: 1px;
+  background: var(--text);
+  opacity: 0.1;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.section-divider.reveal {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+  opacity: 0;
+}
+
+.section-divider.reveal.active {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+
+
+
+
+.project-card {
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.tags {
+  margin: 0.5rem 0;
+}
+
+.tags span {
+  background: #eef0f3;
+  border-radius: 6px;
+  padding: 0.2em 0.6em;
+  font-size: 0.75rem;
+  margin: 0.2em;
+  display: inline-block;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.project-links a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #0056b3;
+}
+
+button {
+  min-width: 100px;
+  text-align: center;
+
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 10px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+button::before {
+   border-radius: 10px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  color: white;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #0077ff;
+  border-radius: 999px;
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #0077ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.project-card a:hover {
+  background-color: #0077ff;
+  color: white;
+}
+
+.project-card a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#about {
+  /* старые стили about */
+  background-color: var(--bg);
+  padding: 4rem 2rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+:root {
+  --bg: #f9f9f9;
+  --text: #333;
+  --card-bg: #fff;
+  --primary: #0077ff;
+    --header-bg: #fff;
+    --navtext: #121212;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card-bg: #1e1e1e;
+  --primary: #5ab0ff;
+    --header-bg: #1a1a1a;
+    --navtext : #fff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card {
+  background: var(--card-bg);
+  transition: background 0.3s ease;
+}
+
+a {
+  color: var(--primary);
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 12px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+}
+
+.skill-bar .fill {
+  height: 100%;
+  background: var(--primary);
+  width: 0; /* по умолчанию пусто */
+  transition: width 1s ease;
+}
+
+
+.toTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.toTopBtn:hover {
+  background-color: var(--primary-hover, #005cd1);
+}
+
+section a{
+font-family: 'Courier New', Courier, monospace;
+text-decoration: overline
+
+}
+
+
+
+.skill {
+  margin-bottom: 2rem;
+}
+
+.skill-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 12px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+}
+
+.skill-bar .fill {
+  height: 100%;
+  background: var(--primary);
+  width: 0;
+  transition: width 1s ease;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+}
+
+form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: 2px solid var(--border, #ddd);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #fff;
+}
+
+form button {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--primary-hover, #005cd1);
+}
+
+body.retro {
+  --header-bg: #0ff;
+  --bg: #000;
+  --text: #0f0;
+  --card-bg: #111;
+  --primary: #0ff;
+  --border: #0f0;
+  font-family: 'VT323', monospace;
+  cursor: crosshair;
+  image-rendering: pixelated;
+}
+
+body.retro .project-card,
+body.retro .skill-bar,
+body.retro input,
+body.retro textarea {
+  border: 1px dashed var(--border);
+  background-color: transparent;
+  color: var(--text);
+  box-shadow: none;
+}
+
+body.retro button {
+  font-family: 'VT323', monospace;
+  background-color: transparent;
+  border: 2px solid #0f0;
+  color: #0f0;
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  cursor: crosshair;
+}

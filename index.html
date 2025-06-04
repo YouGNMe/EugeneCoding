@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EugenCoding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <h1>EugenCoding</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <section id="hero" class="reveal">
+    <h2>Hello, I'm Eugen</h2>
+    <p>A front-end developer who loves code, animation and cats.  A front-end developer passionate about crafting clean, responsive, and engaging websites.
+    I love combining beautiful design with functional code — and yes, I'm also slightly obsessed with pixel-perfect UI and good coffee.
+  </p></p>
+    <button onclick="scrollToSection('projects')">View Projects ↓</button>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+  <p>
+    I'm a self-taught front-end developer based in Germany, focused on creating clean, modern, and interactive websites.
+    I love bringing ideas to life in the browser using HTML, CSS, and JavaScript — and I'm always pushing to learn more.
+  </p>
+  <p>
+    My projects range from minimalist portfolios to playful UI experiments with animations, modals, and localStorage logic.
+    I’m currently expanding my skillset with tools like Git, VS Code, and diving into React as the next step.
+  </p>
+  <p>
+    Outside of code, I’m a huge fan of gaming (achievement hunter here 👀), lo-fi hip-hop, and my cat Pixel — who’s usually supervising my work.
+    I believe that building things is the best way to grow, so I treat every project as a chance to level up.
+  </p>
+  <p>
+    I'm open to freelance, collaboration, or junior positions — especially where I can keep learning, contribute real value, and have fun while doing it.
+  </p>
+  </section>
+
+  <section id="skills" class="reveal">
+  <h2>Skills</h2>
+
+<div class="skill">
+  <div class="skill-label">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <title>HTML5</title>
+      <path fill="#E34F26" d="M1.5 0h21l-1.9 21.7L12 24l-9.1-2.3L1.5 0z"/>
+      <path fill="#EF652A" d="M12 22.1l7.3-2 1.6-17.7H12v19.7z"/>
+      <path fill="#fff" d="M12 6.3h5.3L17 9.3H12V6.3zM12 10.7h4.2l-.4 3.9-3.8 1.1v-5z"/>
+      <path fill="#EBEBEB" d="M12 6.3V9.3H7.4l-.2-1.6.1-1.4H12zM12 10.7v5l-3.7-1-.3-2.5H12z"/>
+    </svg>
+    <span>HTML5</span>
+  </div>
+  <div class="skill-bar">
+    <div class="fill" data-width="90%"></div>
+  </div>
+</div>
+
+
+  <div class="skill">
+    
+    <span>
+      <img src="css.svg" alt="CSS3 logo" width="24" height="24" />
+      CSS</span>
+     <div class="skill-bar">
+    <div class="fill" data-width="65%"></div>
+  </div>
+  </div>
+
+  <div class="skill">   
+
+    <span>   
+    <img src="js.svg" alt="CSS3 logo" width="24" height="24" />
+      JavaScript
+    </span>
+     <div class="skill-bar">
+    <div class="fill" data-width="45%"></div>
+  </div>
+  </div>
+
+  <div class="skill">
+    <span>
+      <img src="github-color-svgrepo-com.svg" alt="Git logo" width="24" height="24"/>
+      Git & GitHub</span>
+     <div class="skill-bar">
+    <div class="fill" data-width="80%"></div>
+  </div>
+  </div>
+
+  <div class="skill">
+    <span>
+            <img src="figma-svgrepo-com.svg" alt="Git logo" width="24" height="24"/>
+      Responsive Design</span>
+    <div class="skill-bar">
+    <div class="fill" data-width="85%"></div>
+  </div>
+</section>
+
+<section id="now-learning" class="reveal">
+  <h2>Now Learning</h2>
+  <ul>
+    <li>📦 React (components, props, hooks)</li>
+    <li>⚙️ Git advanced usage (branches, merge conflicts)</li>
+    <li>🎨 UI/UX principles</li>
+  </ul>
+</section>
+
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+
+<div class="project-card reveal">
+  <div class="preview">
+    <img src="tracker.png" alt="Achievement Tracker Preview">
+  </div>
+  <div class="project-info">
+    <h3>🎮 Achievement Tracker</h3>
+    <p>Manual trophy tracker using localStorage. Pure JS logic and design.</p>
+    <div class="tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>localStorage</span>
+    </div>
+    <div class="project-links">
+      <a href="https://yougnme.github.io/achievement-tracker/" target="_blank">🔗 Live</a>
+      <a href="https://github.com/YouGNMe/achievement-tracker" target="_blank">💻 GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+    <div class="project-card reveal">
+      <div class="preview">
+    <img src="lofiplayer.png" alt="Achievement Tracker Preview">
+  </div>
+   <div class="project-info">
+      <h3>🎧 LoFi Player</h3>
+      <p>Simple music player interface with CSS animations and clean layout.</p>
+       <div class="tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>localStorage</span>
+    </div>
+    <div class="project-links">          <a href="https://yougnme.github.io/LoFiPlayer/" target="_blank">🔗 Live</a>
+      <a href="https://github.com/YouGNMe/LoFiPlayer" target="_blank">💻 GitHub</a>
+    </div>
+   </div>
+  </div>
+
+
+    <div class="project-card reveal">
+      <h3>🧶 DashaKnits (In Progress)</h3>
+      <p>A cozy e-commerce site for handmade products. Fully responsive with animations.</p>
+    </div>
+  </section>
+
+
+  
+<section id="fun" class="reveal">
+  <h2>Fun Facts</h2>
+  <ul>
+    <li>🐈 My cat Pixel once walked across my keyboard and pushed a commit.</li>
+    <li>🎮 I hunt Platinum trophies when I'm not hunting bugs.</li>
+    <li>🎧 I code best with lo-fi and coffee (or both).</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Let’s get in touch:</p>
+
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+
+       <li>Email: <a href="mailto:eugenio_me@icloud.com">iCloud</a></li>
+      <li>GitHub: <a href="https://github.com/YouGNMe" target="_blank">YouGNMe</a></li>
+    </ul>
+  </form>
+</section>>
+
+  <footer>
+    <p>© 2025 EugenCoding. Built with focus and caffeine.</p>
+  </footer>
+
+ 
+  <button id="toTopBtn" title="Back to top">↑</button>
+<button id="retro-toggle" title="Toggle Retro Mode">🕹 Retro Mode</button>
+ <script src="script.js"></script>
+</body>
+</html>
+
+
