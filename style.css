@@ -149,6 +149,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .tags span {
+  color: var(--tagtext);
   background: #eef0f3;
   border-radius: 6px;
   padding: 0.2em 0.6em;
@@ -279,6 +280,7 @@ footer {
   --primary: #0077ff;
     --header-bg: #fff;
     --navtext: #121212;
+    --tagtext: #121212;
 }
 
 body.dark {
@@ -288,6 +290,7 @@ body.dark {
   --primary: #5ab0ff;
     --header-bg: #1a1a1a;
     --navtext : #fff;
+    --tagtext : #121212;
 }
 
 body {
